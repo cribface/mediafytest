@@ -111,6 +111,7 @@
     <Compile Include="Code\Importers\PrenaxImporter.cs" />
     <Compile Include="Code\Importers\BaseImporter.cs" />
     <Compile Include="Code\Mapping\IMagazineMapper.cs" />
+    <Compile Include="MagazineImportService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

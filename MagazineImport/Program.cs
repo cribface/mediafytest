@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using MagazineImport.Code.Importers;
 using Serilog;
 using Serilog.Core;
 
@@ -16,20 +14,11 @@ namespace MagazineImport
             {
                 logger.Information("Magazines import started ...");
 
-                var importers = new List<BaseMultiImporter>
-                {
-                    //Insert your importers here
-                    new PrenaxImporter(),
-                    //new MyNewCustomImporter(),
-                };
+                var service = new MagazineImportService();
 
                 try
                 {
-                    //Run jobs while result is true
-                    foreach (var import in importers)
-                    {
-                        var success = import.Import();
-                    }
+                    service.Run();
                 }
                 catch (Exception ex)
                 {
@@ -37,7 +26,6 @@ namespace MagazineImport
                 }
 
                 logger.Information("All magazine imports completed.");
-                //Console.ReadKey();
             }
         }
 
