@@ -104,13 +104,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Code\Enum\ImportType.cs" />
-    <Compile Include="Code\Helpers\App.cs" />
-    <Compile Include="Code\Helpers\CacheManager.cs" />
     <Compile Include="Code\Helpers\DbHelper.cs" />
     <Compile Include="Code\Helpers\Extensions.cs" />
     <Compile Include="Code\Helpers\FileHelper.cs" />
-    <Compile Include="Code\Helpers\FtpHelper.cs" />
-    <Compile Include="Code\Helpers\WebHelper.cs" />
     <Compile Include="Code\Importers\BaseMultiImporter.cs" />
     <Compile Include="Code\Importers\PrenaxImporter.cs" />
     <Compile Include="Code\Importers\BaseImporter.cs" />

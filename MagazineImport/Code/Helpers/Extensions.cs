@@ -1,19 +1,10 @@
-﻿using System;
-using System.Data;
+﻿using System.Data;
 using SmartXLS;
 
 namespace MagazineImport.Code.Helpers
 {
     public static class Extensions
     {
-        public static string RemoveHtmlText(this object obj)
-        {
-            string str = Convert.ToString(obj);
-            str = System.Text.RegularExpressions.Regex.Replace(str, @"<(.|\n)*?>", string.Empty);
-            return str;
-        }
-
-        
         /// <summary>
         /// WorkBook.ExportDataTable has a bug 
         /// where a column get empty values on all rows in DataTable
