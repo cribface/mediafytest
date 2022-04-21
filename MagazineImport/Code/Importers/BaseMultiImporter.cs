@@ -23,19 +23,17 @@ namespace MagazineImport.Code.Importers
         private int intUpdate = 0;
         private int intDelete = 0;
         
-        public bool Import()
+        public void Import()
         {
             datStartTime = DateTime.Now;
             Log.Logger?.Information("Running job '{0}' - {1}", GetType().Name, datStartTime);
 
-            var b = DoImport();
+            DoImport();
             datEndTime = DateTime.Now;
-            Log.Logger?.Information("Job '{0}' Completed, result: {3} - {1} ({2} seconds) ", GetType().Name, datEndTime, Convert.ToInt32((datEndTime - datStartTime).TotalSeconds), b);
-
-            return b;
+            Log.Logger?.Information("Job '{0}' Completed, result: {3} - {1} ({2} seconds) ", GetType().Name, datEndTime, Convert.ToInt32((datEndTime - datStartTime).TotalSeconds));
         }
 
-        protected abstract bool DoImport();
+        protected abstract void DoImport();
 
         protected bool ImportToDatabase(List<IMagazineMapper> magazines)
         {

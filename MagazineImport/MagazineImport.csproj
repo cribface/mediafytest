@@ -108,9 +108,15 @@
     <Compile Include="Code\Helpers\Extensions.cs" />
     <Compile Include="Code\Helpers\FileHelper.cs" />
     <Compile Include="Code\Importers\BaseMultiImporter.cs" />
-    <Compile Include="Code\Importers\PrenaxImporter.cs" />
+    <Compile Include="Core\IImporter.cs" />
+    <Compile Include="Core\Magazine.cs" />
+    <Compile Include="Core\MagazineMapper.cs" />
+    <Compile Include="Core\MagazineRepository.cs" />
+    <Compile Include="Core\PrenaxImporter.cs" />
     <Compile Include="Code\Importers\BaseImporter.cs" />
+    <Compile Include="Code\Importers\PrenaxMapper.cs" />
     <Compile Include="Code\Mapping\IMagazineMapper.cs" />
+    <Compile Include="Core\MagazineFileService.cs" />
     <Compile Include="MagazineImportJob.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -146,6 +152,7 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
