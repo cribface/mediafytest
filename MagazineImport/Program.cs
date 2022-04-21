@@ -14,11 +14,11 @@ namespace MagazineImport
             {
                 logger.Information("Magazines import started ...");
 
-                var service = new MagazineImportService();
+                var job = new MagazineImportJob();
 
                 try
                 {
-                    service.Run();
+                    job.Run();
                 }
                 catch (Exception ex)
                 {
