@@ -1,0 +1,20 @@
+Too many comments: Code should be easily readable itself
+Too long functions/methods: Easier to understand/read smaller blocks
+Tell a story with the code:
+ReadFromDatabase();
+CalculateNewData();
+WriteToDatabase();
+
+A lot of unused code, remove it, that's what the VCS is for
+Don't mix use of SPs with other code, make dedicated class for this
+Avoid inheritance, unnecessary complexity, use composition, BaseMultiImporter
+Consider document database (MongoDB for example) instead of SQL
+PrenaxMapper: The mapping should be run through before writing to DB to catch errors, not while writing to DB
+The WorkBook is converted to DataRows from which fields are accessed and written to DB, instead skip conversion to Datarows. Make class that maps WorkBook to fields.
+Importer and other functions don't need to return booleans for success. Instead throw exception if something went wrong.
+Use IoC. Easier initialization when using composition and better for unit testing.
+Upgrade .Net and C# version
+
+Using Azure Functions or similar:
+Can't access the filesystem. Instead access Excel-files via FTP for example and read it as a FileStream.
+Separate the code that is accessing the files.
